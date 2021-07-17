@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -37,6 +38,7 @@ public class SignUpActivity extends AppCompatActivity {
         progressDialog.setTitle("Creating Account");
         progressDialog.setMessage("Your account is being created");
 
+         //on click listener for sign up button
         binding.signUpBtnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,6 +62,15 @@ public class SignUpActivity extends AppCompatActivity {
                     }
                 });
 
+            }
+        });
+
+        //redirecting to sing up activity on clicking Click for sign up
+        binding.signUpAlreadyHaveAcc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignUpActivity.this, SignIn.class);
+                startActivity(intent);
             }
         });
     }

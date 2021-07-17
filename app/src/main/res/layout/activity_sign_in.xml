@@ -46,7 +46,7 @@
             android:padding="9dp" />
 
         <TextView
-            android:id="@+id/signIn_alreadyHaveAcc"
+            android:id="@+id/signIn_clickForSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -54,7 +54,7 @@
             android:text="@string/SignIn_TextView" />
 
         <Button
-            android:id="@+id/signIn_btnSignUp"
+            android:id="@+id/signIn_btnSignIn"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
