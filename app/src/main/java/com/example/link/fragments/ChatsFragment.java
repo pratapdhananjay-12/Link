@@ -51,7 +51,7 @@ public class ChatsFragment extends Fragment {
                 list.clear();
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
                     Users users = dataSnapshot.getValue(Users.class);
-                    users.getUserId(dataSnapshot.getKey());
+                    users.setUserId(dataSnapshot.getKey());
                     list.add(users);
                 }
                 usersAdapter.notifyDataSetChanged();
