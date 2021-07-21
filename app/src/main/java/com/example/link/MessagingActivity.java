@@ -2,7 +2,9 @@ package com.example.link;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.link.databinding.ActivityMessagingBinding;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,6 +33,14 @@ public class MessagingActivity extends AppCompatActivity {
 
         binding.msgActivityUserName.setText(userName);
         Picasso.get().load(profilePic).placeholder(R.drawable.user2).into(binding.profileImage);
+
+        binding.backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MessagingActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
