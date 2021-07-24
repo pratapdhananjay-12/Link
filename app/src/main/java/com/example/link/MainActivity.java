@@ -45,9 +45,13 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.logout:
                 auth.signOut();
-                Intent intent = new Intent(MainActivity.this, SignIn.class);
-                startActivity(intent);
+                Intent intent1 = new Intent(MainActivity.this, SignIn.class);
+                startActivity(intent1);
                 break;
+            case R.id.groupChat:
+                Intent intent2 = new Intent(MainActivity.this, GroupChatActivity.class);
+                startActivity(intent2);
+
         }
         return super.onOptionsItemSelected(item);
     }
