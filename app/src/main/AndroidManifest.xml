@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GroupChatActivity"></activity>
+        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".GroupChatActivity" />
         <activity android:name=".MessagingActivity" />
         <activity android:name=".SignIn">
             <intent-filter>

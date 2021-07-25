@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.settings:
-                Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+                Intent intent0 = new Intent(MainActivity.this,SettingsActivity.class);
+                startActivity(intent0);
                 break;
 
             case R.id.logout:
