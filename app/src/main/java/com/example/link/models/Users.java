@@ -1,16 +1,18 @@
 package com.example.link.models;
 
 public class Users {
-    String profilePic, userName, mail, password, userId, lastMessage;
+    String profilePic, userName, mail, password, userId, lastMessage,status;
 
-    public Users(String profilePic, String userName, String mail, String password, String userId, String lastMessage) {
+    public Users(String profilePic, String userName, String mail, String password, String userId, String lastMessage, String status) {
         this.profilePic = profilePic;
         this.userName = userName;
         this.mail = mail;
         this.password = password;
         this.userId = userId;
         this.lastMessage = lastMessage;
+        this.status = status;
     }
+
     public Users(){}
 
     //signUp constructor
@@ -18,6 +20,14 @@ public class Users {
         this.userName = userName;
         this.mail = mail;
         this.password = password;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getProfilePic() {
