@@ -54,7 +54,7 @@ public class MessagingActivity extends AppCompatActivity {
         });
         // this is where showing messages is set
         final ArrayList<MessageModel> messageModels = new ArrayList<>();
-        final ChatAdapter chatAdapter= new ChatAdapter(messageModels,this);
+        final ChatAdapter chatAdapter= new ChatAdapter(messageModels,this, receiverId);
         binding.msgActivityRecyclerView.setAdapter(chatAdapter);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -72,6 +72,7 @@ public class MessagingActivity extends AppCompatActivity {
                         messageModels.clear();
                         for(DataSnapshot snapshot1 : snapshot.getChildren()){
                             MessageModel model = snapshot1.getValue(MessageModel.class);
+                            model.setMessageId(snapshot1.getKey());
                             messageModels.add(model);
                         }
                         //recycler view uptade in real time

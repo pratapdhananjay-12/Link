@@ -2,7 +2,7 @@ package com.example.link.models;
 
 public class MessageModel {
 
-    String mId, message;
+    String mId, message, messageId;
     Long timeStamp;
 
     public MessageModel(String mId, String message, Long timeStamp) {
@@ -17,6 +17,14 @@ public class MessageModel {
     }
 
     public MessageModel() {
+    }
+
+    public String getMessageId() {
+        return messageId;
+    }
+
+    public void setMessageId(String messageId) {
+        this.messageId = messageId;
     }
 
     public String getmId() {
